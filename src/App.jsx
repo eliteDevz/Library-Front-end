@@ -1,20 +1,27 @@
-
-import './App.css'
-import Sidebar from './components/Sidebar'
-
-
-
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import Booklist from "./pages/homePage";
+import AddBook from "./pages/addBook";
+import BookDetails from "./pages/bookDetails";
+import HomePage from "./pages/homePage";
 
 function App() {
-  return (
+  const libraryRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/add-new",
+      element: <AddBook />,
+    },
+    {
+      path: "/books/:id",
+      element: <BookDetails />,
+    },
+  ]);
 
-    <div>
-      < Sidebar />
-    </div>
-
-
-  )
+  return <RouterProvider router={libraryRouter} />;
 }
 
-export default App
+export default App;
