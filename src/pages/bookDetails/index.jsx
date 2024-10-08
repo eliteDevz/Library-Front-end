@@ -1,6 +1,17 @@
+
+ import detailsImage from '../../assets/images/detailsImage.jpg'
 const BookDetails = () => {
   return (
-    <div>BookDetails</div>
+
+    <div className=''>
+    <div className='h-[300px] w-[800px]'>
+      <img src={detailsImage} alt="" srcSet="" />
+    </div>
+
+
+
+    </div>
+    
   )
 }
 

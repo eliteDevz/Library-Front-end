@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar.jsx";
 import Sidebar from "../../components/Sidebar.jsx";
 import Hero from "./components/Hero.jsx";
 import { Link } from "react-router-dom";
+import BookForm from "../../components/BookForm.jsx";
 
 const HomePage = () => {
   return (
