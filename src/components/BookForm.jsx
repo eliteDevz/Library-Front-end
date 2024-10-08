@@ -28,13 +28,14 @@ const BookForm = () => {
   return (
       
 
-    <div className='h-[20vh] w-[60vw] p-[2%] mx-auto text-[0.8rem] '>
+    <div className='h-[15vh] w-[60vw] p-[2%] mx-auto text-[0.8rem]'>
 
-    <form onSubmit={handleSubmit} className="w-[100%] mx-auto p-6  bg-white shadow-md rounded-lg">
-      <h2 className="font-bold mb-2  text-gray-700">Add a New Book</h2>
+    <form onSubmit={handleSubmit} className="w-[100%] mx-auto p-6  bg-white shadow-md rounded-lg mt-[50px] ">
+      <h2 className=" font-bold  text-gray-700 mb-2">Add a New Book</h2>
 
-      <div className='grid grid-cols-2 gap-4'>
-      <div className="mb-2">
+      
+       <div className='grid grid-cols-2 gap-4'>
+      <div className="mb-4">
         <label className=" text-gray-700 font-bold mb-1" htmlFor="title">
           Title
         </label>
@@ -75,13 +76,15 @@ const BookForm = () => {
           value={formData.description}
           onChange={handleChange}
           className="w-full p-1 border rounded"
-          rows="4"
+          rows="2"
           required
         ></textarea>
       </div>
 
+      <div className='grid grid-cols-2 gap-4'>
+
       <div className="mb-2">
-        <label className="block text-gray-700 font-bold mb-2" htmlFor="publisher">
+        <label className=" text-gray-700 font-bold mb-2" htmlFor="publisher">
           Publisher
         </label>
         <input
@@ -93,6 +96,24 @@ const BookForm = () => {
           className="w-full p-1 border rounded"
           required
         />
+      </div>
+
+
+      <div className="mb-2">
+        <label className=" text-gray-700 font-bold mb-2" htmlFor="Genre">
+          Genre
+        </label>
+        <input
+          type="text"
+          id="genre"
+          name="genre"
+          value={formData.genre}
+          onChange={handleChange}
+          className="w-full p-1 border rounded"
+          required
+        />
+      </div>
+
       </div>
 
       <div className="mb-2">
