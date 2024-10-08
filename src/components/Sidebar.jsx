@@ -23,8 +23,8 @@ const Sidebar = () => {
             alt="opened book"
             className="h-[40px] w-[40px]"
           />
-          <h3 className="text-[2rem] font-semibold text-[#001643]">
-            Book<span className="text-[2rem] font-light">Nest</span>
+          <h3 className="text-[1.7rem] font-semibold text-[#001643]">
+            Book<span className="text-[1.7rem] font-light">Nest</span>
           </h3>
         </div>
         <div id="menu-items" className="flex flex-col gap-y-[2rem]">

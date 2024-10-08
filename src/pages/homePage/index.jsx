@@ -12,10 +12,22 @@ const HomePage = () => {
         <Sidebar />
       </div>
       <div id="Right-side" className="w-[82%] h-[100%]">
-        <Navbar />
-        <div id="action-area" className="w-[100%] h-[100vh] bg-green-500">
-          <div id="middle-section" className="flex">
+        <div id="nav-placeholder" className="w-[82vw] h-[12vh] bg-[#ffffff00]">
+          <Navbar />
+        </div>
+
+        <div
+          id="action-area"
+          className="w-[100%] h-[100vh]  mt-[12vh] flex justify-between"
+        >
+          <div id="middle-section" className="w-[64%] h-[100%]">
             <NewReleases />
+          </div>
+          <div className="w-[18vw] h-[400px] bg-blue-500 top-[12vh] right-0">
+            <div
+              id="book-deets"
+              className="w-[18vw] h-[400px] bg-red-500 fixed top-[12vh] right-0"
+            ></div>
           </div>
         </div>
       </div>
