@@ -28,13 +28,14 @@ const BookForm = () => {
   return (
       
 
-    <div className='h-[20vh] w-[30vw] p-[2%] mx-auto'>
+    <div className='h-[20vh] w-[60vw] p-[2%] mx-auto text-[0.8rem] '>
 
     <form onSubmit={handleSubmit} className="w-[100%] mx-auto p-6  bg-white shadow-md rounded-lg">
-      <h2 className="text-[0.6rem] font-bold mb-2">Add a New Book</h2>
+      <h2 className="font-bold mb-2  text-gray-700">Add a New Book</h2>
 
-      <div className="mb-4">
-        <label className="block text-gray-700 font-bold mb-1" htmlFor="title">
+      <div className='grid grid-cols-2 gap-4'>
+      <div className="mb-2">
+        <label className=" text-gray-700 font-bold mb-1" htmlFor="title">
           Title
         </label>
         <input
@@ -43,13 +44,13 @@ const BookForm = () => {
           name="title"
           value={formData.title}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-1 border rounded"
           required
         />
       </div>
 
       <div className="mb-2">
-        <label className="block text-gray-700 font-bold mb-2" htmlFor="author">
+        <label className=" text-gray-700 font-bold mb-2" htmlFor="author">
           Author
         </label>
         <input
@@ -58,9 +59,10 @@ const BookForm = () => {
           name="author"
           value={formData.author}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-1 border rounded"
           required
         />
+      </div>
       </div>
 
       <div className="mb-2">
@@ -72,7 +74,7 @@ const BookForm = () => {
           name="description"
           value={formData.description}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-1 border rounded"
           rows="4"
           required
         ></textarea>
@@ -88,7 +90,7 @@ const BookForm = () => {
           name="publisher"
           value={formData.publisher}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-1 border rounded"
           required
         />
       </div>
@@ -103,7 +105,7 @@ const BookForm = () => {
           name="publishedDate"
           value={formData.publishedDate}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-1 border rounded"
           required
         />
       </div>
@@ -118,7 +120,7 @@ const BookForm = () => {
           name="pages"
           value={formData.pages}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-1 border rounded"
           required
         />
       </div>
@@ -133,7 +135,7 @@ const BookForm = () => {
           name="language"
           value={formData.language}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-1 border rounded"
           required
         />
       </div>
