@@ -13,26 +13,31 @@ export const K = {
             author: "authors goes here"
         },
         {
+
             image: url,
             title: "title goes here",
             author: "authors goes here"
         },
         {
+
             image: url,
             title: "title goes here",
             author: "authors goes here"
         },
         {
+
             image: url,
             title: "title goes here",
             author: "authors goes here"
         },
         {
-            image: url,
+
+          image: url,
             title: "title goes here",
             author: "authors goes here"
         },
         {
+
             image: url,
             title: "title goes here",
             author: "authors goes here"
