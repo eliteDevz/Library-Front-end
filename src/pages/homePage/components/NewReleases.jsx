@@ -32,7 +32,7 @@ const NewReleases = () => {
               >
                 <div
                   id="image"
-                  className="h-[170px] w-[90%] bg-[brown] absolute bottom-[20px] left-[20px] rounded-[10px]"
+                  className="h-[170px] w-[90%] absolute bottom-[20px] left-[20px] rounded-[10px]"
                 >
                   <img
                     src={harryPotter}

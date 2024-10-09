@@ -1,10 +1,11 @@
-import BookForm from "../../components/BookForm";
-import Navbar from "../../components/Navbar";
-import Sidebar from "../../components/Sidebar";
-import Single from "../../components/SinglePage";
+import Footer from "../../components/Footer.jsx";
+import Navbar from "../../components/Navbar.jsx";
+import Sidebar from "../../components/Sidebar.jsx";
 
+import { Link } from "react-router-dom";
+import Single from "../../components/SinglePage.jsx";
 
-const AddBook = () => {
+const Library = () => {
   return (
     <div className="bg-[#E5E9EF] w-[100vw] flex relative">
       <div id="sidebar" className="w-[18%] h-[100%]">
@@ -14,25 +15,16 @@ const AddBook = () => {
         <div id="nav-placeholder" className="w-[82vw] h-[12vh] bg-[#a8383800]">
           <Navbar />
         </div>
-
         <div
           id="action-area"
           className="w-[100%] h-[100vh]  flex justify-evenly"
         >
-          <div id="middle-section" className="w-[64vw] h-[100%]">
+          <div id="middle-section" className="w-[100%] h-[100%]">
             <div
               id="middle-section-container"
               className="w-[95%] h-[100%] mx-auto pt-[20px]"
             >
-              <BookForm />
-            </div>
-          </div>
-          <div id="book-details" className="w-[18vw]">
-            <div
-              id="book-deets-placeholder"
-              className="bg-[#ffff0000] w-[18vw]"
-            >
-              <Single />
+              <div className="bg-[black] w-[100%] h-[100px]"></div>
             </div>
           </div>
         </div>
@@ -41,9 +33,4 @@ const AddBook = () => {
   );
 };
 
-export default AddBook;
-
-
-
-
-
+export default Library;
