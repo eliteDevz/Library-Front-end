@@ -8,6 +8,7 @@ export const K = {
             author: "authors goes here"
         },
         {
+
             image: 'url',
             title: "title goes here",
             author: "authors goes here"
@@ -19,6 +20,7 @@ export const K = {
         },
         {
             image: 'url',
+
             title: "title goes here",
             author: "authors goes here"
         },
