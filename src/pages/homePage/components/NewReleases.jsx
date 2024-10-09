@@ -11,7 +11,7 @@ const NewReleases = () => {
         <div id="title" className="flex items-center justify-between">
           <h3 className="font-semibold text-[1.5rem]">New Releases</h3>
           <button className="bg-[#E6EFFE] text-[#1D62FF] py-[5px] px-[20px] rounded-[10px]">
-            See All
+            See All.
           </button>
         </div>
 
