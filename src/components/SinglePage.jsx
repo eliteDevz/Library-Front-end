@@ -1,57 +1,64 @@
+import { FaBook } from "react-icons/fa";
+import StarRating from "./StarRating";
+import george from "../assets/images/george.jpg";
 
-import { FaBook } from 'react-icons/fa';
-import StarRating from './StarRating';
-import imageS from '../assets/images/imageS.jpg'
 const Single = () => {
   return (
-    
-        <div className='h-[88vh] w-[18vw] bg-slate-600'>
-           
-            <div className='w-[80%] h-[100%] mx-auto bg-[#001743] py-0' id='container'>
-            <h1 className='text-white text-bold'>Best Seller</h1>
-            <img className='w-[70%] mx-auto p-[10%] border rounded-md bg-slate-50 border-white ' src={imageS} alt=""  srcSet=''/>
-
-            
-            <h5 className='text-white text-xs pt-[8%] text-center'>1984</h5>
-            <h6 className='text-[#8DA6DA] text-[0.6rem] text-center'>George Owell</h6>
-            <StarRating rating={4} />
-            
-            
-
-
-<div className="flex items-center space-x-4 mt-[15%]">
-      <div className=''>
-        <p className="text-[0.6rem] text-[#8DA6DA] text-center ">320 Pages </p>
-      </div>
-      <div className="border-l-2 border-[#8DA6DA] pl-[7%] ">
-        <p className="text-[0.6rem] text-[#8DA6DA] text-center ">643 Ratings</p>
-      </div>
-      <div className="border-l-2 border-[#8DA6DA] pl-[7%] text-center">
-        <p className="text-[0.6rem] text-[#8DA6DA]">110 Reviews</p>
-      </div>
-    </div>
-            
-            <p className='text-[#8DA6DA] text-[0.6rem] text-justify  py-[10%]  mt-[5%]' >
-            Nineteen Eighty-Four is a dystopian novel and cautionary tale by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime
-            </p>
-            <button className="flex items-center w-[70%] mx-auto bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 ">
-      <FaBook className="mr-2" />
-      Read Now
-    </button>
-            
-            
-            </div>
-
-
-
-          
-
-
-
+    <section className="bg-[#001542] py-[70px] w-[18vw] h-[88vh] fixed right-0 overflow-y-auto">
+      <div
+        id="single-page-container"
+        className=" w-[70%]  mx-auto flex flex-col gap-y-[1.5rem]"
+      >
+        <h5 className="text-[1.7rem] text-[white] text-center">Best Seller</h5>
+        <div
+          id="image"
+          className="w-[100%] h-[35vh] bg-[#EEF3F3] rounded-[10px] flex items-center justify-center"
+        >
+          <img src={george} alt="book cover art" className="w-[70%] h-[80%]" />
         </div>
+        <div
+          id="title-author"
+          className="flex flex-col items-center gap-y-[0.1rem]"
+        >
+          <h5 className=" text-[1.17rem] font-bold text-white">1984</h5>
+          <h6 className="text-[1rem] text-[#819ACE]">George Owell</h6>
+        </div>
+        <div id="star-ratings" className="">
+          <StarRating rating={4} />
+        </div>
+        <div id="ratings" className="flex my-[10px]">
+          <div id="first" className="flex flex-col items-center px-[0.7rem]">
+            <h4 className="text-[#819ACE] text-[1.1rem]">320</h4>
+            <p className="text-[#76809C]">Pages</p>
+          </div>
+          <div
+            id="second"
+            className="flex flex-col items-center border-x-[1.5px] border-[#2D4573] px-[0.7rem]"
+          >
+            <h4 className="text-[#819ACE] text-[1.1rem]">643</h4>
+            <p className="text-[#76809C]">Ratings</p>
+          </div>
+          <div id="third" className="flex flex-col items-center px-[0.7rem]">
+            <h4 className="text-[#819ACE] text-[1.1rem]">110</h4>
+            <p className="text-[#76809C]">Reviews</p>
+          </div>
+        </div>
+        <div id="bk-desc" className="w-[100%] ">
+          <p className="text-center text-[#819ACE] text-[0.9rem]">
+            Nineteen Eighty-Four is a dystopian novel and cautionary tale by
+            English writer George Orwell. It was published on 8 June 1949 by
+            Secker & Warburg as Orwell's ninth and final book completed in his
+            lifetime
+          </p>
+        </div>
+        <button className="bg-[#0055FF] w-[100%] rounded-[10px] text-[white] flex items-center justify-center gap-x-[1rem] py-[10px] px-[20px] mt-[15px]">
+          Read Now <FaBook className="mr-2" />
+        </button>
+      </div>
+    </section>
 
 
-  )
+  );
 };
 
 export default Single;
