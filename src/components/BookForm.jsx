@@ -28,7 +28,7 @@ const BookForm = () => {
   return (
       
 
-    <div className='h-[20vh] w-[60vw] p-[2%] mx-auto text-[0.8rem] '>
+    <div className='h-[12vh] w-[60vw] p-[2%] mx-auto text-[0.8rem]'>
 
     <form onSubmit={handleSubmit} className="w-[100%] mx-auto p-6  bg-white shadow-md rounded-lg">
       <h2 className="font-bold mb-2  text-gray-700">Add a New Book</h2>

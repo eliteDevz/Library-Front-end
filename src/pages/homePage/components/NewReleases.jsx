@@ -46,7 +46,7 @@ const NewReleases = () => {
                 className="w-[62%] px-[20px] py-[20px] flex flex-col gap-y-[0.5rem]"
               >
                 <h5 className="text-[1.1rem] font-semibold text-white leading-[1.3rem]">
-                  Harry Potter And The Sorcerer's Stone
+                  Harry Potter And The Sorcerer&apos;s Stone
                 </h5>
                 <p className="text-[#76809C] text-[0.9rem]">J. K. Rowling</p>
                 <div className="flex gap-x-[0.2rem] items-center">
@@ -92,7 +92,7 @@ const NewReleases = () => {
                 className="w-[62%] px-[20px] py-[20px] flex flex-col gap-y-[0.5rem]"
               >
                 <h5 className="text-[1.1rem] font-semibold text-white leading-[1.3rem]">
-                  Harry Potter And The Sorcerer's Stone
+                  Harry Potter And The Sorcerer&apos;s Stone
                 </h5>
                 <p className="text-[#76809C] text-[0.9rem]">J. K. Rowling</p>
                 <div className="flex gap-x-[0.2rem] items-center">
