@@ -7,7 +7,7 @@ const Navbar = () => {
       <div id="nav-container" className="w-[95%] h-[100%] mx-auto flex">
         <div
           id="search-side"
-          className="  w-[75%] h-[100%] flex items-center justify-between"
+          className="  w-[78%] h-[100%] flex items-center justify-between"
         >
           <input
             type="search"
@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
         <div
           id="user"
-          className="   w-[25%] h-[100%] flex items-center justify-end gap-x-[1.5rem]"
+          className="   w-[22%] h-[100%] flex items-center justify-end gap-x-[1.5rem]"
         >
           <img
             src={notificationBell}
