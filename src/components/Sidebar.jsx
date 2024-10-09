@@ -6,6 +6,7 @@ import library from "../assets/images/sidebar/library.png";
 import chat from "../assets/images/sidebar/chat.png";
 import logout from "../assets/images/sidebar/logout.png";
 import home from "../assets/images/sidebar/discover.png";
+import avatar from "../assets/images/sidebar/avatar.png";
 import { Link } from "react-router-dom";
 
 
@@ -53,19 +54,21 @@ const Sidebar = () => {
               </h5>
             </div>
           </Link>
-          <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
-            <div
-              id="img-bg"
-              className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
-            >
-              <img
-                src={settings}
-                alt="heart shaped icon"
-                className="h-[28px] w-[28px]"
-              />
+          <Link to="/book-categories">
+            <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
+              <div
+                id="img-bg"
+                className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
+              >
+                <img
+                  src={settings}
+                  alt="heart shaped icon"
+                  className="h-[28px] w-[28px]"
+                />
+              </div>
+              <h5 className="text-[1.17rem] text-[#727C8E]">Category</h5>
             </div>
-            <h5 className="text-[1.17rem] text-[#727C8E]">Category</h5>
-          </div>
+          </Link>
           <Link to="/all-books">
             <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
               <div
@@ -81,19 +84,21 @@ const Sidebar = () => {
               <h5 className="text-[1.17rem] text-[#727C8E]">My Library</h5>
             </div>
           </Link>
-          <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
-            <div
-              id="img-bg"
-              className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
-            >
-              <img
-                src={heart}
-                alt="heart shaped icon"
-                className="h-[28px] w-[28px]"
-              />
+          <Link to="/book-authors">
+            <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
+              <div
+                id="img-bg"
+                className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
+              >
+                <img
+                  src={avatar}
+                  alt="heart shaped icon"
+                  className="h-[28px] w-[28px]"
+                />
+              </div>
+              <h5 className="text-[1.17rem]  text-[#727C8E]">Authors</h5>
             </div>
-            <h5 className="text-[1.17rem]  text-[#727C8E]">Favourite</h5>
-          </div>
+          </Link>
         </div>
 
         <hr className="w-[100%] mx-auto border-t-2px " />
