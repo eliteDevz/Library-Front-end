@@ -31,7 +31,7 @@ const Sidebar = () => {
             />
 
             <h3 className="text-[1.7rem] font-semibold text-[#001643]">
-              Book<span className="text-[1.7rem] font-light">Nest</span>
+              Book<span className="text-[1.7rem] font-light">Haven</span>
             </h3>
           </div>
         </Link>

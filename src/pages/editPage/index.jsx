@@ -1,10 +1,9 @@
-import BookForm from "../../components/BookForm";
+import UpdateForm from "../../components/UpdateForm";
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import Single from "../../components/SinglePage";
 
-
-const AddBook = () => {
+const EditPage = () => {
   return (
     <div className="bg-[#E5E9EF] w-[100vw] flex relative">
       <div id="sidebar" className="w-[18%] h-[100%]">
@@ -24,7 +23,7 @@ const AddBook = () => {
               id="middle-section-container"
               className="w-[95%] h-[100%] mx-auto pt-[20px]"
             >
-              <BookForm />
+              <UpdateForm />
             </div>
           </div>
           <div id="book-details" className="w-[18vw]">
@@ -41,9 +40,4 @@ const AddBook = () => {
   );
 };
 
-export default AddBook;
-
-
-
-
-
+export default EditPage;
