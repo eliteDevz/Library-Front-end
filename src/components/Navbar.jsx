@@ -1,5 +1,6 @@
 import avatar from "../assets/images/navbar/avatar.png";
 import notificationBell from "../assets/images/navbar/notification-bell.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -14,9 +15,11 @@ const Navbar = () => {
             placeholder="Search by title, author or genre"
             className="h-[5.5vh] w-[55%] rounded-[0.625rem] bg-[#F0F5FF] px-8 "
           />
-          <button className="h-[5.5vh] px-[1.5rem] bg-[#0055FF] rounded-[0.625rem] text-white hover:bg-[#007bff] hover:border-[2px]">
-            Add New Book
-          </button>
+          <Link to="/add-new">
+            <button className="h-[5.5vh] px-[1.5rem] bg-[#0055FF] rounded-[0.625rem] text-white hover:bg-[#007bff] hover:border-[2px]">
+              Add New Book
+            </button>
+          </Link>
         </div>
         <div
           id="user"

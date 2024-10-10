@@ -51,13 +51,11 @@ const Single = () => {
             lifetime
           </p>
         </div>
-        <button className="bg-[#0055FF] w-[100%] rounded-[10px] text-[white] flex items-center justify-center gap-x-[1rem] py-[10px] px-[20px] mt-[15px]">
+        <button className="bg-[#0055FF] w-[100%] rounded-[10px] text-[white] flex items-center justify-center gap-x-[1rem] py-[10px] px-[20px] mt-[15px] hover:bg-[#007bff] hover:border-[2px] hover:border-[#001542]">
           Read Now <FaBook className="mr-2" />
         </button>
       </div>
     </section>
-
-
   );
 };
 

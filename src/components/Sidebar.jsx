@@ -6,6 +6,11 @@ import library from "../assets/images/sidebar/library.png";
 import chat from "../assets/images/sidebar/chat.png";
 import logout from "../assets/images/sidebar/logout.png";
 import home from "../assets/images/sidebar/discover.png";
+import avatar from "../assets/images/sidebar/avatar.png";
+import { Link } from "react-router-dom";
+
+
+
 
 const Sidebar = () => {
   return (
@@ -17,71 +22,83 @@ const Sidebar = () => {
         id="sidebar-container"
         className="w-[80%] h-[100%] mx-auto py-[3.2rem] pl-[1.2rem] flex flex-col gap-y-[3rem]"
       >
-        <div id="app-name" className="flex items-center gap-x-[0.7rem]">
-          <img
-            src={openedBook}
-            alt="opened book"
-            className="h-[40px] w-[40px]"
-          />
-          <h3 className="text-[1.7rem] font-semibold text-[#001643]">
-            Book<span className="text-[1.7rem] font-light">Nest</span>
-          </h3>
-        </div>
+        <Link to="/">
+          <div id="app-name" className="flex items-center gap-x-[0.7rem]">
+            <img
+              src={openedBook}
+              alt="opened book"
+              className="h-[40px] w-[40px]"
+            />
+
+            <h3 className="text-[1.7rem] font-semibold text-[#001643]">
+              Book<span className="text-[1.7rem] font-light">Nest</span>
+            </h3>
+          </div>
+        </Link>
         <div id="menu-items" className="flex flex-col gap-y-[2rem]">
-          <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
-            <div
-              id="img-bg"
-              className="bg-[#0055FF] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
-            >
-              <img
-                src={home}
-                alt="heart shaped icon"
-                className="h-[20px] w-[20px]"
-              />
+          <Link to="/">
+            <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
+              <div
+                id="img-bg"
+                className="bg-[#0055FF] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
+              >
+                <img
+                  src={home}
+                  alt="heart shaped icon"
+                  className="h-[20px] w-[20px]"
+                />
+              </div>
+
+              <h5 className="text-[1.17rem] font-semibold text-[#001643]">
+                Discover
+              </h5>
             </div>
-            <h5 className="text-[1.17rem] font-semibold text-[#001643]">
-              Discover
-            </h5>
-          </div>
-          <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
-            <div
-              id="img-bg"
-              className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
-            >
-              <img
-                src={settings}
-                alt="heart shaped icon"
-                className="h-[28px] w-[28px]"
-              />
+          </Link>
+          <Link to="/book-categories">
+            <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
+              <div
+                id="img-bg"
+                className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
+              >
+                <img
+                  src={settings}
+                  alt="heart shaped icon"
+                  className="h-[28px] w-[28px]"
+                />
+              </div>
+              <h5 className="text-[1.17rem] text-[#727C8E]">Category</h5>
             </div>
-            <h5 className="text-[1.17rem] text-[#727C8E]">Category</h5>
-          </div>
-          <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
-            <div
-              id="img-bg"
-              className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
-            >
-              <img
-                src={library}
-                alt="heart shaped icon"
-                className="h-[28px] w-[28px]"
-              />
+          </Link>
+          <Link to="/all-books">
+            <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
+              <div
+                id="img-bg"
+                className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
+              >
+                <img
+                  src={library}
+                  alt="heart shaped icon"
+                  className="h-[28px] w-[28px]"
+                />
+              </div>
+              <h5 className="text-[1.17rem] text-[#727C8E]">My Library</h5>
             </div>
-            <h5 className="text-[1.17rem] text-[#727C8E]">My Library</h5>
-          </div>
-          <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
-            <div
-              id="img-bg"
-              className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
-            >
-              <img
-                src={heart}
-                alt="heart shaped icon"
-                className="h-[28px] w-[28px]"
-              />
+          </Link>
+          <Link to="/book-authors">
+            <div id="menu-item" className="flex items-center gap-x-[0.7rem]">
+              <div
+                id="img-bg"
+                className="bg-[#F2F2F5] w-[38px] h-[38px] rounded-[0.625rem] flex justify-center items-center"
+              >
+                <img
+                  src={avatar}
+                  alt="heart shaped icon"
+                  className="h-[28px] w-[28px]"
+                />
+              </div>
+              <h5 className="text-[1.17rem]  text-[#727C8E]">Authors</h5>
             </div>
-            <h5 className="text-[1.17rem]  text-[#727C8E]">Favourite</h5>
-          </div>
+          </Link>
         </div>
 
         <hr className="w-[100%] mx-auto border-t-2px " />

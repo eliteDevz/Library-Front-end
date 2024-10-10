@@ -1,10 +1,9 @@
-import Footer from "../../components/Footer.jsx";
 import Navbar from "../../components/Navbar.jsx";
 import Sidebar from "../../components/Sidebar.jsx";
 import NewReleases from "./components/NewReleases.jsx";
 import { Link } from "react-router-dom";
-import BookForm from "../../components/BookForm.jsx";
 import Single from "../../components/SinglePage.jsx";
+import ForYou from "./components/ForYou.jsx";
 
 const HomePage = () => {
   return (
@@ -19,14 +18,15 @@ const HomePage = () => {
 
         <div
           id="action-area"
-          className="w-[100%] h-[100vh]  flex justify-evenly"
+          className="w-[100%]  flex justify-evenly"
         >
           <div id="middle-section" className="w-[64vw] h-[100%]">
             <div
               id="middle-section-container"
-              className="w-[95%] h-[100%] mx-auto pt-[20px]" 
+              className="w-[95%] h-[100%] mx-auto pt-[20px] flex flex-col gap-y-[2rem]" 
             >
               <NewReleases />
+              <ForYou />
             </div>
           </div>
           <div id="book-details" className="w-[18vw]">
@@ -45,8 +45,4 @@ const HomePage = () => {
 
 export default HomePage;
 
-{
-  /* <Link to="/add-new" className="bg-green-700 text-white p-[5px]">
-  Add new Book
-</Link>; */
-}
+
