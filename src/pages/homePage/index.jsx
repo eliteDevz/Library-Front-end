@@ -18,7 +18,7 @@ const HomePage = () => {
 
         <div
           id="action-area"
-          className="w-[100%] h-[100vh]  flex justify-evenly"
+          className="w-[100%]  flex justify-evenly"
         >
           <div id="middle-section" className="w-[64vw] h-[100%]">
             <div
