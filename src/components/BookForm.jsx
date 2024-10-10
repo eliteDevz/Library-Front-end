@@ -55,11 +55,12 @@ const BookForm = () => {
             <select name="author" id="author" className="w-full p-1 border rounded">
 
               {/* place name of authors here */}
-              <option value="author1">Volvo</option>
-              <option value="author2">Saab</option>
-              <option value="author3">Mercedes</option>
-              <option value="author4">Audi</option>
-              <option value="author4">benz</option>
+              <option value="no-author"></option>
+              <option value="author1">Fredrick Douglass</option>
+              <option value="author2">Lewis Alerson</option>
+              <option value="author3">David Trotter</option>
+              <option value="author4">Henry David Thoreau</option>
+              <option value="author4">Terence A.Smart</option>
             </select>
 
           </div>
