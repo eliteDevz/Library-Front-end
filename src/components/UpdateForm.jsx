@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 const handleSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -29,7 +26,7 @@ const UpdateForm = () => {
     <div className='h-[12vh] w-[60vw] p-[2%] mx-auto text-[0.8rem]'>
 
     <form onSubmit={handleSubmit} className="w-[100%] mx-auto p-6  bg-white shadow-md rounded-lg">
-      <h2 className="font-bold mb-2  text-gray-700">Add a New Book</h2>
+      <h2 className="font-bold mb-2  text-gray-700">Update Book Content</h2>
 
       <div className='grid grid-cols-2 gap-4'>
         <div className="mb-2">

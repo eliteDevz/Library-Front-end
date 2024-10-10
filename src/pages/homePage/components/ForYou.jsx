@@ -1,8 +1,11 @@
-import hatefulEight from '../../../assets/images/bookCards/hateful-eight.png'
-import ellipsis from '../../../assets/images/bookCards/ellipsis.png'
-
+import { useState } from "react";
+import hatefulEight from "../../../assets/images/bookCards/hateful-eight.png";
+import ellipsis from "../../../assets/images/bookCards/ellipsis.png";
+import { Link } from "react-router-dom";
 
 const ForYou = () => {
+  const [isclicked, setIsclicked] = useState(false);
+
   return (
     <section id="new-releases" className="w-[100%] bg-white rounded-[10px]">
       <div
@@ -38,26 +41,30 @@ const ForYou = () => {
                 <img
                   src={ellipsis}
                   alt="menu icon"
-                  className="h-[35px] absolute bottom-0 right-0"
+                  className="h-[35px] absolute right-0 top-50% translateY-[50%] cursor-pointer"
                   htmlFor="dropdown-toggle"
+                  onClick={() => {
+                    setIsclicked(!isclicked);
+                    console.log(isclicked);
+                  }}
                 />
-                <ul id='dropdown-toogle' className="dropdown-menu absolute right-0 mt-2 w-40 bg-white border border-gray-300 rounded-lg shadow-md hidden">
-                  <li className="p-2 hover:bg-gray-100">
-                    <a href="#" className="block text-gray-700">
-                      Action 1
-                    </a>
-                  </li>
-                  <li className="p-2 hover:bg-gray-100">
-                    <a href="#" className="block text-gray-700">
-                      Action 2
-                    </a>
-                  </li>
-                  <li className="p-2 hover:bg-gray-100">
-                    <a href="#" className="block text-gray-700">
-                      Action 3
-                    </a>
-                  </li>
-                </ul>
+
+                {isclicked && (
+                  <ul className="  bg-[#ffffff] w-[100px] h-[60px]  absolute right-0 bottom-[90%] rounded-[10px]">
+                    <Link to="/update">
+                      <li className="h-[50%]  px-[15px] hover:bg-[#1D62FF] hover:text-white rounded-t-[10px] flex items-center">
+                        <a href="#" className="text-gray-400 hover:text-white">
+                          Edit
+                        </a>
+                      </li>
+                    </Link>
+                    <li className=" h-[50%] px-[15px] hover:bg-[#1D62FF] hover:text-white rounded-b-[10px] flex items-center">
+                      <a href="#" className="text-gray-400 hover:text-white">
+                        Delete
+                      </a>
+                    </li>
+                  </ul>
+                )}
               </div>
             </div>
           </div>

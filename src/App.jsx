@@ -6,6 +6,8 @@ import HomePage from "./pages/homePage";
 import Library from './pages/library/index.jsx'
 import Categories from './pages/categories/index.jsx'
 import Authors from './pages/authors/index.jsx'
+import Update from './components/UpdateForm.jsx'
+import EditPage from "./pages/editPage/index.jsx";
 
 function App() {
   const libraryRouter = createBrowserRouter([
@@ -32,6 +34,10 @@ function App() {
     {
       path: "/book-authors",
       element: <Authors />,
+    },
+    {
+      path: "/update",
+      element: <EditPage />,
     },
   ]);
 
