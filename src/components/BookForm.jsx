@@ -1,8 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../constants';
 
 const BookForm = () => {
+  const [authors, setAuthors] = useState([]);
+
+  const getAuthors = async () => {
+    const response = await axios.get(`${BASE_URL}/authors`);
+    setAuthors(response.data)
+
+  }
+
+  useEffect(() => {
+    getAuthors();
+  }, []);
 
   const handleSubmit = async (event) => {
     try {
@@ -16,9 +27,10 @@ const BookForm = () => {
         description: formData.get('description'),
         publisher: formData.get('publisher'),
         genre: formData.get('genre'),
-        publishedDate: formData.get('publishedDate'),
+        publishDate: formData.get('publishedDate'),
         pages: formData.get('pages'),
         language: formData.get('language'),
+        coverImage: formData.get('cover-image'),
       })
     } catch (error) {
       console.log(error)
@@ -53,14 +65,9 @@ const BookForm = () => {
               Author
             </label>
             <select name="author" id="author" className="w-full p-1 border rounded">
-
-              {/* place name of authors here */}
-              <option value="no-author"></option>
-              <option value="author1">Fredrick Douglass</option>
-              <option value="author2">Lewis Alerson</option>
-              <option value="author3">David Trotter</option>
-              <option value="author4">Henry David Thoreau</option>
-              <option value="author4">Terence A.Smart</option>
+              {authors.map((author) => {
+                return <option key={author._id} value={author._id}>{author.name}</option>
+              })}
             </select>
 
           </div>
@@ -142,6 +149,19 @@ const BookForm = () => {
             type="text"
             id="language"
             name="language"
+            className="w-full p-1 border rounded"
+            required
+          />
+        </div>
+
+        <div className="mb-2">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="cover-image">
+            Cover Image
+          </label>
+          <input
+            type="text"
+            id="cover-image"
+            name="cover-image"
             className="w-full p-1 border rounded"
             required
           />
