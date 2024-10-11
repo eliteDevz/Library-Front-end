@@ -31,7 +31,7 @@ const Navbar = () => {
             className="h-[25px] w-[25px]"
           />
           <div className="flex gap-x-[0.7rem] items-center mr-[1rem]">
-            <div className="h-[38px] w-[38px] rounded-[40px] bg-black ">
+            <div className="h-[38px] w-[38px] rounded-[40px]">
               <img
                 src={avatar}
                 alt="profile picture"
