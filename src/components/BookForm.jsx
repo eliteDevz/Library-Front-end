@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { BASE_URL } from '../constants';
+import { useEffect, useState } from "react";
+
+import axios from "axios";
+import { BASE_URL } from "../constants";
+import { useNavigate } from "react-router-dom";
 
 const BookForm = () => {
   const [authors, setAuthors] = useState([]);
+  const navigate = useNavigate();
 
   const getAuthors = async () => {
     const response = await axios.get(`${BASE_URL}/authors`);
-    setAuthors(response.data)
-
-  }
+    setAuthors(response.data);
+  };
 
   useEffect(() => {
     getAuthors();
@@ -22,31 +24,31 @@ const BookForm = () => {
       const formData = new FormData(event.target);
       // post data to api
       const response = await axios.post(`${BASE_URL}/books`, {
-        title: formData.get('title'),
-        author: formData.get('author'),
-        description: formData.get('description'),
-        publisher: formData.get('publisher'),
-        genre: formData.get('genre'),
-        publishDate: formData.get('publishedDate'),
-        pages: formData.get('pages'),
-        language: formData.get('language'),
-        coverImage: formData.get('cover-image'),
-      })
+        title: formData.get("title"),
+        author: formData.get("author"),
+        description: formData.get("description"),
+        publisher: formData.get("publisher"),
+        genre: formData.get("genre"),
+        publishDate: formData.get("publishedDate"),
+        pages: formData.get("pages"),
+        language: formData.get("language"),
+        coverImage: formData.get("cover-image"),
+      });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-
+    navigate("/all-books");
   };
 
   return (
-
-
-    <div className='h-[12vh] w-[60vw] p-[2%] mx-auto text-[0.8rem]'>
-
-      <form onSubmit={handleSubmit} className="w-[100%] mx-auto p-6  bg-white shadow-md rounded-lg">
+    <div className="h-[12vh] w-[60vw] p-[2%] mx-auto text-[0.8rem]">
+      <form
+        onSubmit={handleSubmit}
+        className="w-[100%] mx-auto p-6  bg-white shadow-md rounded-lg"
+      >
         <h2 className="font-bold mb-2  text-gray-700">Add a New Book</h2>
 
-        <div className='grid grid-cols-2 gap-4'>
+        <div className="grid grid-cols-2 gap-4">
           <div className="mb-2">
             <label className=" text-gray-700 font-bold mb-1" htmlFor="title">
               Title
@@ -64,17 +66,27 @@ const BookForm = () => {
             <label className=" text-gray-700 font-bold mb-2" htmlFor="author">
               Author
             </label>
-            <select name="author" id="author" className="w-full p-1 border rounded">
+            <select
+              name="author"
+              id="author"
+              className="w-full p-1 border rounded"
+            >
               {authors.map((author) => {
-                return <option key={author._id} value={author._id}>{author.name}</option>
+                return (
+                  <option key={author._id} value={author._id}>
+                    {author.name}
+                  </option>
+                );
               })}
             </select>
-
           </div>
         </div>
 
         <div className="mb-2">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="description">
+          <label
+            className="block text-gray-700 font-bold mb-2"
+            htmlFor="description"
+          >
             Description
           </label>
           <textarea
@@ -86,10 +98,12 @@ const BookForm = () => {
           ></textarea>
         </div>
 
-        <div className='grid grid-cols-2 gap-4'>
-
+        <div className="grid grid-cols-2 gap-4">
           <div className="mb-2">
-            <label className=" text-gray-700 font-bold mb-2" htmlFor="publisher">
+            <label
+              className=" text-gray-700 font-bold mb-2"
+              htmlFor="publisher"
+            >
               Publisher
             </label>
             <input
@@ -112,11 +126,13 @@ const BookForm = () => {
               required
             />
           </div>
-
         </div>
 
         <div className="mb-2">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="publishedDate">
+          <label
+            className="block text-gray-700 font-bold mb-2"
+            htmlFor="publishedDate"
+          >
             Published Date
           </label>
           <input
@@ -142,7 +158,10 @@ const BookForm = () => {
         </div>
 
         <div className="mb-2">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="language">
+          <label
+            className="block text-gray-700 font-bold mb-2"
+            htmlFor="language"
+          >
             Language
           </label>
           <input
@@ -155,7 +174,10 @@ const BookForm = () => {
         </div>
 
         <div className="mb-2">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="cover-image">
+          <label
+            className="block text-gray-700 font-bold mb-2"
+            htmlFor="cover-image"
+          >
             Cover Image
           </label>
           <input
@@ -167,12 +189,13 @@ const BookForm = () => {
           />
         </div>
 
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+        <button
+          type="submit"
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+        >
           Add New
         </button>
       </form>
-
-
     </div>
   );
 };

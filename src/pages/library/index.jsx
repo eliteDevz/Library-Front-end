@@ -54,7 +54,7 @@ const Library = () => {
         </div>
         <div
           id="action-area"
-          className="w-[100%]  flex justify-evenly"
+          className="w-[100%] h-[140vh] flex justify-evenly"
         >
           <div id="middle-section" className="w-[100%] h-[100%]">
             <div
