@@ -1,10 +1,11 @@
-import { useState } from "react";
-import hatefulEight from "../../../assets/images/bookCards/hateful-eight.png";
-import ellipsis from "../../../assets/images/bookCards/ellipsis.png";
-import { Link } from "react-router-dom";
+// import { useState } from "react";
+import BookCard from "../../../components/BookCard";
+// import hatefulEight from "../../../assets/images/bookCards/hateful-eight.png";
+// import ellipsis from "../../../assets/images/bookCards/ellipsis.png";
+// import { Link } from "react-router-dom";
 
 const ForYou = () => {
-  const [isclicked, setIsclicked] = useState(false);
+  //   const [isclicked, setIsclicked] = useState(false);
 
   return (
     <section id="new-releases" className="w-[100%] bg-white rounded-[10px]">
@@ -19,7 +20,8 @@ const ForYou = () => {
           </button>
         </div>
         <div id="cards" className="grid grid-cols-4 gap-x-[1rem] gap-y-[1rem]">
-          <div
+          <BookCard />
+          {/* <div
             id="card"
             className=" h-[320px] bg-black flex flex-col justify-between py-[20px] rounded-[10px] bg-gradient-to-br from-[#1F5289] to-[#3A061B]"
           >
@@ -67,7 +69,7 @@ const ForYou = () => {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
