@@ -32,7 +32,7 @@ const BookDetails = () => {
       <section className="w-[60vw] mx-auto p-[5%]">
         <div
           id="detail-container"
-          className="w-[100%] h-[100%] flex justify-between"
+          className="w-[100%] h-[100%] flex justify-between items-center"
         >
           <div id="left-side" className="w-[30%] h-[100%] flex items-center">
             <img
@@ -48,7 +48,7 @@ const BookDetails = () => {
             <span className="font-bold">{book.author?.name}</span>
             <p className="pt-[5%] italic">{book.description}</p>
             <p className="pt-[5%]">{book.longDescription}</p>
-            <div className="flex flex-col-4 gap-9 justify-center pt-[10%]">
+            <div className="flex flex-col-4 gap-9  pt-[10%]">
               <div>
                 <h6 className="font-bold">Language</h6>
                 <h6 className="font-bold pt-[5%]">Publisher</h6>
