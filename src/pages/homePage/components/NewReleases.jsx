@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../../../constants";
+import downloads from "../../../assets/images/bookCards/downloads.png"
 import axios from "axios";
 
 const NewReleases = () => {
